@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2? family= Comfortaa:wght@300;400;500;600;700 & family= Rubik+Moonrocks & family= Rubik+Puddles & display= менять');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   font-family: 'Comfortaa', cursive;
+   background-color: rgb(170, 192, 237);
+}
+
+.active-link{
+    background-color: hotpink;
+    color: white;
+}
+
+.active-link a{
+    color: white;
+}
+
+/* Б У Р Г Е Р */
+.container-burge label {
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: relative;
+   }
+   .container-burger input[type="checkbox"] + span {
+    position: absolute;
+    left: 20px; 
+    top: 20px;
+    width: 100%; 
+    height: 100%;
+    background: url(../icon/burger.png) no-repeat; /* кнопка */
+    cursor: pointer; /* Курсор в виде руки */
+   }
+
+   #toggle {
+    display: none;
+   }
+   nav {
+    display: none;
+   }
+   .container-burger{
+    visibility: hidden;
+   }
+
+/* м е н ю */
+.aside{
+    position: fixed;
+    height: 100vh;    
+    width: 200px;
+    box-shadow: 3px 3px 4px 1px;
+    background-color: rgb(190 210 250);
+}
+
+h2{
+    padding-left: 20px;
+}
+
+.menu{
+    width: 160px;
+    margin-left: 20px;  
+    padding: 0;
+}
+
+hr{
+    background-color: rgb(116, 116, 116);
+    height: 2px;
+    margin-top: 10px;
+    border: 0;
+}
+
+.menu li{
+    display: flex;
+    width: 160px;
+    align-items: center;
+    text-transform: capitalize;
+    height: 40px;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+}
+
+.menu-img img{
+    width: 20px;
+    padding: 0 10px 0 10px;
+}
+
+h2 a:hover{
+    color: rgba(255, 105, 180, 0.6);
+}
+
+.menu li:hover{
+    background-color: hotpink;
+}
+
+
+.Dashboard{
+    margin: 0 50px 0 250px;
+}
+
+.Dashboard .card{ /*для всех*/
+    background-color: #e0e8ff;
+    box-shadow: 3px 3px 4px 1px;
+    margin: 20px 5px 10px 5px;
+}
+
+.page{
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    flex-direction: row-reverse; /*обратный порядок*/
+}
+
+.profile{
+    padding: 10px;
+    width: 60%;
+    position: relative;
+}
+
+.red{
+    background-color: rgb(204, 3, 3);
+    color: white;
+    padding: 10px;
+    margin: -20px 10px 0 10px;
+}
+
+.form .card{
+    padding: 0 5px;
+}
+
+.row{
+    display: flex;
+
+}
+
+.row input{
+    width: 100%;
+    background-color: #e0e8ff;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.row-one div{
+   padding: 5px;
+}
+
+.one div{
+    width: calc(100% / 3);
+ }
+
+.row-two{
+    width: 100%;
+}
+.two div{
+    width: calc(100% / 2);
+ }
+.three div{
+    width: 100%;
+}
+.four div{
+    width: calc(100% / 3);
+ }
+.five div{
+    width: 100%;
+}
+
+.five label{
+    white-space: nowrap;
+}
+
+.five textarea{
+    height: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #e0e8ff;
+}
+
+.row-four{
+    display: flex;
+}
+
+/* u s e r */
+
+.user{
+    position: relative;
+    width: 40%;
+    text-align: center
+}
+
+.photo{
+    width: 150px;
+    /* margin: -50px auto; */
+}
+
+.photo img{
+    position: absolute;
+    width: 150px;
+    border-radius: 75px;
+    right: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.description{
+    justify-content: center;
+    padding-top: 100px;
+}
+
+
+/* F O O T E R*/
+.footer{
+    margin: 10px 0 30px 0;    
+    width: 100%;
+    display: flex;
+}
+
+.footer li{
+    margin: 0 10px 0 10px; 
+}
+
+.footer li:last-child{
+    margin-left: auto;
+    color: rgb(140 140 140);
+}
+
+.footer a:hover{
+    color: rgb(255, 105, 180);
+}
+
+@media screen and (min-width:800px) and (max-width:1000px){
+    .page{
+        display: block;
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width:800px){
+    .page{
+        display: block;
+        flex-direction: column-reverse;
+    }
+    .aside{
+        visibility: hidden;
+    }
+    .Dashboard {
+        margin: 20px;
+    }
+    .Dashboard .card{
+        width: 100%;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .container-burger{
+        visibility: visible;
+    }
+    h2{
+        margin-left: 50px;
+    }
+}
