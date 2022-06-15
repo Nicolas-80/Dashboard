@@ -11,6 +11,13 @@ body{
 
 
 /* Б У Р Г Е Р */
+.container-burger{
+    width: 100%;
+    z-index: 1;
+    background-color: #0000ff9e;
+    /* height: 60px; */
+    top: 0;
+}
 .container-burge label {
     width: 32px;
     height: 32px;
@@ -97,6 +104,8 @@ a{
 }
 .menu li:hover{
     background-color: hotpink;
+    color: white;
+    background-image: url(/icon/account_white.svg);
 }
 
 
@@ -109,7 +118,9 @@ a{
     box-shadow: 3px 3px 4px 1px; /*тень*/
     margin: 20px 5px 10px 5px; /*отступы*/
 }
-
+.Dashboard .card:hover{ /*для всех карточек*/
+    background-color: #fcfdff;
+}
 
 /* 1 - Й   Р Я Д */
 .row-one{ 
@@ -125,12 +136,16 @@ a{
     width: calc(100% / 2);
     padding: 10px;
 }
-
-.row-one .icon img{
+.row-one .icon{
     position: absolute;
     width: 30px;
-    margin-top: -30px;
+    height: 30px;
+    margin-top: -20px;
     padding: 10px;
+    box-shadow: 1px 1px 4px 1px;
+}
+.row-one .icon img{
+    width: 30px;
 }
 
 .Dashboard .green{
@@ -146,22 +161,11 @@ a{
     background-color: red;
 }
 
-.Dashboard .green img{
-    background-color: green;
+.row-one li{
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
-
-.Dashboard .orange img{
-    background-color: orange;
-}
-.Dashboard .blue img{
-    background-color: blue;
-}
-.Dashboard .red img{
-    background-color: red;
-}
-
 .row-one .title{ 
-    margin-top: 10px;
     text-align: end;
     font-size: 70%;
     color: rgb(116, 116, 116);
@@ -173,7 +177,6 @@ a{
 .row-one .bottom-text{
     color: rgb(116, 116, 116);
     font-size: 60%;
-    margin: 5px 0 10px 10px;
 }
 
 .Dashboard .bottom-text img{
@@ -193,8 +196,8 @@ a{
 }
 
 .row-two li{
-    margin: 0;
-    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .row-two .card{ /*размеры карточек*/
@@ -204,28 +207,22 @@ a{
 
 .row-two .icon{
     padding: 5px;
-    margin: -20px 10px 0 10px;
+    margin-top: -20px;
 }
 
 .row-two .icon img{
     width: 100%;
     display: block;
 }
-
-.row-two .title{
+.row-two li{
     text-align: start;
-    color: black;
     font-size:80%;
-    margin-left: 10px;
 }
 
-.row-two .meaning {
-    text-align: start;
-    color: black;
-    font-size: 80%;
-    margin: 0 10px 10px 10px;
-    border-bottom: 1px solid black;
-}
+.bottom-text{
+    font-weight: bold;
+    border-top: 1px solid black;
+    }
 
 
 /* 3-Й  Р Я Д */
@@ -241,7 +238,7 @@ a{
 }
 
 .row-three .navigation{
-    padding: 10px;
+    padding: 15px 5px 15px 5px;
     margin: -10px 10px 5px 10px;
 }
 
@@ -258,6 +255,7 @@ a{
 .navigation a{
     color: white;
     white-space: nowrap;
+    padding: 3px;
 }
 
 .row-three img{
@@ -270,6 +268,7 @@ a{
     display: flex;
     margin: 0 10px 0 10px;
     align-items: center;
+    padding: 5px 0 5px 0;
 }
 
 .task-list input{
@@ -278,6 +277,7 @@ a{
 .card .workers{
     border-bottom: 1px solid #000;
     display: flex;
+    padding-bottom: 5px;
     margin: 5px 10px 10px 10px;
 }
 
@@ -333,6 +333,12 @@ a{
         display: flex;
         width: auto;
     }
+    .row-two li{
+        font-size: 60%;
+    }
+    .row-three .card{
+        font-size: 70%;
+    }
 }
 
 @media screen and (min-width:650px) and (max-width:800px){
@@ -343,14 +349,23 @@ a{
         display: flex;
         width: auto;
     }
+    .row-two li{
+        font-size: 60%;
+    }
     .row-three{
         display: block;
     }
     .row-three .card{
         width: auto;
     }
+    .row-three .card li{
+        width: auto;
+        font-size: 120%;
+    }
     .container-burger{
         visibility: visible;
+        position: fixed;
+        height: 60px;
     }
     .aside{
         visibility: hidden;
@@ -364,17 +379,27 @@ a{
 }
 
 @media screen and (min-width:500px) and (max-width:650px){
+    .container-burger{
+        visibility: visible;
+        position: fixed;
+    }
     .row-one{
         display: block;
     }
     .row-one .block{
         width: auto;
     }
+    .row-one .card{
+        font-size: 150%;
+    }
     .row-two {
         display: block;
     }
     .row-two .card {
         width: auto;
+    }
+    .row-two li {
+        font-size: 120%;
     }
     .row-three{
         display: block;

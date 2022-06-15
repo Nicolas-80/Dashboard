@@ -141,6 +141,9 @@ h2 a:hover{
     display: flex;
 
 }
+.row div{
+    padding: 5px;
+}
 
 .row input{
     width: 100%;
@@ -217,6 +220,13 @@ h2 a:hover{
     justify-content: center;
     padding-top: 100px;
 }
+.description p:first-child{
+    color: rgb(95, 95, 95);
+}
+.description p:nth-child(2){
+    font-weight: bold;
+    font-size: 150%;
+}
 
 
 /* F O O T E R*/
@@ -243,6 +253,13 @@ h2 a:hover{
     .page{
         display: block;
         flex-direction: column-reverse;
+    }
+    .user{
+        width: 100%;
+        padding: 10px;
+    }
+    .profile{
+        width: 100%;
     }
 }
 @media screen and (max-width:800px){
