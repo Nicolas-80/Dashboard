@@ -99,7 +99,8 @@ nav{
 }
 .footer{
     width: 100%;    
-    margin: 5px 0 5px 0;    
+    margin: 5px 0 5px 0; 
+    font-size: 70%;   
 }
 .footer li{
     display: inline-block;    
@@ -111,6 +112,16 @@ nav{
 }
 .footer a:hover{
     color: rgb(255, 105, 180);
+}
+
+@media screen and (min-width:500px) and (max-width:650px){
+    .footer {
+        text-align: center;
+        font-size: 60%;
+    }
+    .footer li:last-child{
+        float: inherit;
+    }
 }
 
 @media screen and (max-width:500px){
@@ -128,5 +139,11 @@ nav{
     }
     .container-burger{
         display: block;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer li:last-child{
+        float: inherit;
     }
 }

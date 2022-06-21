@@ -436,6 +436,9 @@ a{
     .row-three .card{
         width: auto;
     }
+    .footer {
+font-size: 80%;
+    }
 }
 
 @media screen and (max-width:500px){
@@ -487,5 +490,11 @@ a{
     }
     .row-three .card{
         width: auto;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer li:last-child{
+        float: inherit;
     }
 }

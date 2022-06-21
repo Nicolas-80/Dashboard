@@ -322,4 +322,10 @@ h2 a:hover{
     .b1{
         width: 100%;
     }
+    .footer {
+        text-align: center;
+    }
+    .footer li:last-child{
+        float: inherit;
+    }
 }
