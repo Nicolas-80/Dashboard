@@ -8,12 +8,10 @@ body{
    font-family: 'Comfortaa', cursive;
    background-color: rgb(170, 192, 237);
 }
-
 .active-link{
     background-color: hotpink;
     color: white;
 }
-
 .active-link a{
     color: white;
 }
@@ -27,14 +25,13 @@ body{
    }
    .container-burger input[type="checkbox"] + span {
     position: absolute;
-    left: 20px; 
-    top: 20px;
-    width: 100%; 
-    height: 100%;
-    background: url(../icon/burger.png) no-repeat; /* кнопка */
-    cursor: pointer; /* Курсор в виде руки */
+    width: 32px; 
+    height: 32px;    
+    left: 30px; 
+    top: 14px;
+    background: url(../icon/burger.png) no-repeat;
+    cursor: pointer; /* Курсор рука */
    }
-
    #toggle {
     display: none;
    }
@@ -42,124 +39,121 @@ body{
     display: none;
    }
    .container-burger{
-    visibility: hidden;
+    display: none;
+    background-color: #0000ff9e;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1;    
+    position: fixed;
    }
 
-/* м е н ю */
+/* М Е Н Ю */
 .aside{
     position: fixed;
+    width: 200px;    
     height: 100vh;    
-    width: 200px;
+    text-align: center;
     box-shadow: 3px 3px 4px 1px;
     background-color: rgb(190 210 250);
 }
-
 h2{
     padding-left: 20px;
+    padding-top: 10px;
 }
-
 .menu{
-    width: 160px;
-    margin-left: 20px;  
-    padding: 0;
+    width: 140px;
+    margin: 0 auto;  
 }
-
 hr{
     background-color: rgb(116, 116, 116);
     height: 2px;
     margin-top: 10px;
     border: 0;
 }
-
 .menu li{
     display: flex;
     width: 160px;
+    height: 40px;    
     align-items: center;
     text-transform: capitalize;
-    height: 40px;
 }
-
 li{
     list-style-type: none;
 }
-
 a{
     display: inline-block;
     text-decoration: none;
     color: rgb(64, 64, 64);
 }
-
 .menu-img img{
     width: 20px;
     padding: 0 10px 0 10px;
 }
-
 h2 a:hover{
     color: rgba(255, 105, 180, 0.6);
 }
-
 .menu li:hover{
     background-color: hotpink;
 }
 
-
-.Dashboard{
-    margin: 0 50px 0 250px;
+/*П Р А В А Я С Т О Р О Н А*/
+.dashboard{
+    margin-left: 200px;
+    width: calc(100% - 200px);
 }
-
-.Dashboard .card{ /*для всех*/
+.dashboard-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.dashboard .card{ /*для всех*/
     background-color: #e0e8ff;
     box-shadow: 3px 3px 4px 1px;
-    margin: 20px 5px 10px 5px;
+    margin: 30px 10px 10px 10px;
 }
-
+.dashboard .card:hover{
+    background-color: #fcfdff;
+}
 .page{
     display: flex;
     width: 100%;
-    padding-top: 50px;
-    flex-direction: row-reverse; /*обратный порядок*/
+    padding-top: 80px;
+    padding-bottom: 50px;
+    flex-direction: row-reverse;
+    border-bottom: 2px solid black;
 }
-
 .profile{
+    position: relative;   
+    width: 60%;     
     padding: 10px;
-    width: 60%;
-    position: relative;
 }
-
 .red{
-    background-color: rgb(204, 3, 3);
+    background-color: hotpink;
     color: white;
     padding: 10px;
-    margin: -20px 10px 0 10px;
+    margin-top: -20px;
 }
-
 .form .card{
     padding: 0 5px;
 }
-
 .row{
     display: flex;
-
 }
 .row div{
     padding: 5px;
 }
-
 .row input{
     width: 100%;
-    background-color: #e0e8ff;
+    background-color: #e0e8ff00;
     border: none;
     border-bottom: 1px solid black;
 }
-
 .row-one div{
    padding: 5px;
 }
-
 .one div{
     width: calc(100% / 3);
  }
-
 .row-two{
     width: 100%;
 }
@@ -175,50 +169,64 @@ h2 a:hover{
 .five div{
     width: 100%;
 }
-
 .five label{
     white-space: nowrap;
 }
-
 .five textarea{
+    width: 100%;    
     height: 20px;
-    width: 100%;
     border: none;
     border-bottom: 1px solid black;
-    background-color: #e0e8ff;
+    background: #e0e8ff00;
+    resize: none;
 }
-
+.input{
+    text-align: end;
+    padding-top: 10px;
+}
+.b1:hover{
+    background-color: rgb(254, 51, 153);
+    color: white;
+    cursor: pointer;
+}
+.b1{
+    height: 40px;
+    background: hotpink;
+    color: #e0e8ff;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+}
 .row-four{
     display: flex;
 }
 
-/* u s e r */
 
+/* u s e r */
 .user{
     position: relative;
     width: 40%;
-    text-align: center
+    height: 100%;
+    padding:20px 10px;    
+    text-align: center;
 }
-
-.photo{
-    width: 150px;
-    /* margin: -50px auto; */
-}
-
 .photo img{
     position: absolute;
     width: 150px;
-    border-radius: 75px;
     right: 0;
     left: 50%;
     margin-right: -50%;
+    border-radius: 75px;    
     transform: translate(-50%, -50%);
     box-shadow: 3px 0 3px 3px rgba(0, 0, 0, 0.5);
 }
-
 .description{
     justify-content: center;
     padding-top: 100px;
+}
+.description p:last-child{
+    font-style: italic;
+    font-family: emoji;
 }
 .description p:first-child{
     color: rgb(95, 95, 95);
@@ -227,24 +235,28 @@ h2 a:hover{
     font-weight: bold;
     font-size: 150%;
 }
+.user img:hover{
+    cursor: pointer;
+   }
 
 
-/* F O O T E R*/
+/* F O O T E R */
 .footer{
-    margin: 10px 0 30px 0;    
-    width: 100%;
-    display: flex;
+    width: 100%;    
+    margin: 30px 0 30px 0;    
 }
-
 .footer li{
-    margin: 0 10px 0 10px; 
+    display: inline-block;    
+    margin: 0 10px 0 10px;
 }
 
 .footer li:last-child{
-    margin-left: auto;
+    float: right;
     color: rgb(140 140 140);
 }
-
+.comment{
+    text-align: end;
+}
 .footer a:hover{
     color: rgb(255, 105, 180);
 }
@@ -255,33 +267,59 @@ h2 a:hover{
         flex-direction: column-reverse;
     }
     .user{
-        width: 100%;
-        padding: 10px;
+        width: auto;
     }
     .profile{
-        width: 100%;
+        width: auto;
     }
 }
+
 @media screen and (max-width:800px){
     .page{
         display: block;
         flex-direction: column-reverse;
     }
     .aside{
-        visibility: hidden;
+        display: none;
     }
-    .Dashboard {
-        margin: 20px;
+    .dashboard {
+        width: auto;        
+        margin: 20px auto;
     }
-    .Dashboard .card{
-        width: 100%;
-        padding: 0;
+    .dashboard .card{
+        width: auto;
         padding-top: 10px;
     }
     .container-burger{
-        visibility: visible;
+        display: block;
     }
     h2{
-        margin-left: 50px;
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    .row{
+        display: block;
+    }
+    .one div {
+        width: auto;
+    }
+    .two div {
+        width: auto;
+    }
+    .four div {
+        width: auto;
+    }.footer li{
+        text-align: center;
+    }
+    .footer li:last-child{
+        float: none;
+    }
+    .input{
+        text-align: center;
+    }
+    .b1{
+        width: 100%;
     }
 }
